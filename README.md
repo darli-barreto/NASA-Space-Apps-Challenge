@@ -2,10 +2,6 @@
 
 TERRA compara terrenos volcánicos del Perú con tres referencias de la Luna y Marte: Mons Mouton, Hadley e InSight. El ranking prioriza candidatos para estudios de campo según su parecido topográfico.
 
-![Vista en color del terreno de Andagua, Perú](public/evidence/sentinel-55742.jpg)
-
-Andagua, Perú. Recorte Sentinel‑2 L2A del 29 de julio de 2026. Contiene datos modificados de Copernicus Sentinel.
-
 ## Ejecutar el proyecto
 
 Con Node.js y Bun instalados, ejecuta desde la carpeta del proyecto:
