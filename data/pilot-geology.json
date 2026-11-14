@@ -1,0 +1,18 @@
+{
+  "earth": {
+    "classification": "Coladas o campo de lavas basalto-andesíticas",
+    "classificationSource": "Inventario geomorfológico de INGEMMET, registro 55742",
+    "classificationUrl": "https://geocatminnube.ingemmet.gob.pe/arcgis/rest/services/SERV_GEOMORFOLOGIA/MapServer/0/query?f=pjson&objectIds=55742&outFields=objectid%2Cetiqueta%2Csubunidad&returnGeometry=false",
+    "sheet": "Orcopampa 31r3",
+    "scale": "1:50 000",
+    "sheetCatalogLayer": "https://geocatminnube.ingemmet.gob.pe/arcgis/rest/services/SERV_MAPAS_GEOLOGICOS/MapServer/14",
+    "sheetRecordId": 218,
+    "bulletinUrl": "https://hdl.handle.net/20.500.12544/3189"
+  },
+  "moon": {
+    "interpretation": "Macizo interpretado como un fragmento del borde elevado de la cuenca Polo Sur–Aitken, cubierto por depósitos de impactos posteriores.",
+    "scale": "1:100 000",
+    "studyUrl": "https://doi.org/10.1029/2025JE009127"
+  },
+  "limits": "Los mapas aportan contexto del origen del terreno. Para comparar minerales y materiales hacen falta observaciones locales equivalentes."
+}

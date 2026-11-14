@@ -1,0 +1,184 @@
+{
+  "source": "https://api.opentopodata.org/v1/srtm90m?locations=19.396013%2C-155.265069%7C19.396014%2C-155.246000%7C19.396013%2C-155.226931%7C19.413999%2C-155.265071%7C19.414000%2C-155.246000%7C19.413999%2C-155.226929%7C19.431985%2C-155.265073%7C19.431986%2C-155.246000%7C19.431985%2C-155.226927%7C35.015345%2C-111.038628%7C35.015347%2C-111.016667%7C35.015345%2C-110.994706%7C35.033331%2C-111.038633%7C35.033333%2C-111.016667%7C35.033331%2C-110.994701%7C35.051317%2C-111.038638%7C35.051319%2C-111.016667%7C35.051317%2C-110.994696%7C40.767011%2C-113.855749%7C40.767014%2C-113.832000%7C40.767011%2C-113.808251%7C40.784998%2C-113.855755%7C40.785000%2C-113.832000%7C40.784998%2C-113.808245%7C40.802984%2C-113.855761%7C40.802986%2C-113.832000%7C40.802984%2C-113.808239&interpolation=bilinear&nodata_value=null",
+  "retrievedAt": "2026-11-13T15:48:33.086Z",
+  "spacingKm": 2,
+  "controls": [
+    {
+      "id": "kilauea",
+      "name": "Entorno de Kīlauea Iki",
+      "role": "Volcanismo documentado",
+      "center": {
+        "lat": 19.414,
+        "lon": -155.246
+      },
+      "source": "https://science.nasa.gov/solar-system/analog-explorer/",
+      "coordinateContext": "Ventana aproximada elegida por TERRA en el entorno de Kīlauea Iki.",
+      "rationale": "NASA documenta Kīlauea como análogo de paisajes basálticos y lo presenta junto a Hadley.",
+      "samples": [
+        {
+          "lat": 19.396012573315627,
+          "lon": -155.26506865887302,
+          "elevation": 1118
+        },
+        {
+          "lat": 19.396013567881624,
+          "lon": -155.24599999999998,
+          "elevation": 1119
+        },
+        {
+          "lat": 19.396012573315627,
+          "lon": -155.226931341127,
+          "elevation": 1101
+        },
+        {
+          "lat": 19.41399900502858,
+          "lon": -155.26507076792245,
+          "elevation": 1074
+        },
+        {
+          "lat": 19.414,
+          "lon": -155.24599999999998,
+          "elevation": 1066
+        },
+        {
+          "lat": 19.41399900502858,
+          "lon": -155.22692923207762,
+          "elevation": 1146
+        },
+        {
+          "lat": 19.43198543674138,
+          "lon": -155.26507287869163,
+          "elevation": 1204
+        },
+        {
+          "lat": 19.43198643211838,
+          "lon": -155.24599999999998,
+          "elevation": 1184
+        },
+        {
+          "lat": 19.43198543674138,
+          "lon": -155.22692712130845,
+          "elevation": 1122
+        }
+      ]
+    },
+    {
+      "id": "barringer",
+      "name": "Entorno de Meteor Crater",
+      "role": "Contraste de proceso",
+      "center": {
+        "lat": 35.033333,
+        "lon": -111.016667
+      },
+      "source": "https://pubs.usgs.gov/circ/1300/pdf/Cir1300_508.pdf",
+      "coordinateContext": "Centro aproximado tomado del inventario de impactos del USGS.",
+      "rationale": "Origen por impacto. Permite comprobar si un proceso distinto obtiene una distancia topográfica baja.",
+      "samples": [
+        {
+          "lat": 35.01534458935707,
+          "lon": -111.03862849820882,
+          "elevation": 1695
+        },
+        {
+          "lat": 35.01534656788162,
+          "lon": -111.01666699999998,
+          "elevation": 1690
+        },
+        {
+          "lat": 35.01534458935707,
+          "lon": -110.9947055017912,
+          "elevation": 1676
+        },
+        {
+          "lat": 35.033331020744654,
+          "lon": -111.03863333084291,
+          "elevation": 1682
+        },
+        {
+          "lat": 35.033333,
+          "lon": -111.01666699999998,
+          "elevation": 1691
+        },
+        {
+          "lat": 35.033331020744654,
+          "lon": -110.99470066915706,
+          "elevation": 1670
+        },
+        {
+          "lat": 35.05131745213178,
+          "lon": -111.03863816704819,
+          "elevation": 1681
+        },
+        {
+          "lat": 35.05131943211837,
+          "lon": -111.01666699999998,
+          "elevation": 1669
+        },
+        {
+          "lat": 35.05131745213178,
+          "lon": -110.99469583295183,
+          "elevation": 1652
+        }
+      ]
+    },
+    {
+      "id": "bonneville",
+      "name": "Salina de Bonneville",
+      "role": "Contraste de terreno plano",
+      "center": {
+        "lat": 40.785,
+        "lon": -113.832
+      },
+      "source": "https://www.blm.gov/visit/bonneville-salt-flats",
+      "coordinateContext": "Ventana aproximada elegida por TERRA dentro de la salina.",
+      "rationale": "Costra salina extensa. Se espera un relieve bajo frente al entorno de Hadley.",
+      "samples": [
+        {
+          "lat": 40.76701113322875,
+          "lon": -113.8557485044513,
+          "elevation": 1282
+        },
+        {
+          "lat": 40.76701356788163,
+          "lon": -113.832,
+          "elevation": 1282
+        },
+        {
+          "lat": 40.76701113322875,
+          "lon": -113.80825149554869,
+          "elevation": 1282
+        },
+        {
+          "lat": 40.78499756439241,
+          "lon": -113.85575493541194,
+          "elevation": 1282
+        },
+        {
+          "lat": 40.785,
+          "lon": -113.832,
+          "elevation": 1282
+        },
+        {
+          "lat": 40.78499756439241,
+          "lon": -113.80824506458805,
+          "elevation": 1282
+        },
+        {
+          "lat": 40.80298399555539,
+          "lon": -113.855761371418,
+          "elevation": 1282
+        },
+        {
+          "lat": 40.80298643211837,
+          "lon": -113.832,
+          "elevation": 1282
+        },
+        {
+          "lat": 40.80298399555539,
+          "lon": -113.80823862858199,
+          "elevation": 1282
+        }
+      ]
+    }
+  ]
+}

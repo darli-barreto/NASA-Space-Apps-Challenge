@@ -1,0 +1,138 @@
+{
+  "candidateId": 55742,
+  "referenceId": "moon-mons-mouton",
+  "method": "native-pixel-spherical-area-1",
+  "side": 3,
+  "spacingM": 1000,
+  "order": "south-to-north rows, west-to-east columns",
+  "retrievedAt": "2026-11-13T15:46:06.258119+00:00",
+  "earthEdges": {
+    "lon": [
+      -72.3784645572281,
+      -72.36913556095598,
+      -72.35980656468385,
+      -72.35047756841173
+    ],
+    "lat": [
+      -15.432590324088782,
+      -15.423597108029595,
+      -15.414603891970406,
+      -15.40561067591122
+    ]
+  },
+  "moonEdges": {
+    "lon": [
+      30.474362810458743,
+      30.824787603486246,
+      31.175212396513754,
+      31.525637189541257
+    ],
+    "lat": [
+      -84.6494668293252,
+      -84.6164889431084,
+      -84.5835110568916,
+      -84.55053317067478
+    ]
+  },
+  "terrain": [
+    {
+      "id": "lola",
+      "name": "LRO/LOLA",
+      "source": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_64.img",
+      "asset": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_64.img",
+      "values": [
+        4982.58803742785,
+        5084.716744224463,
+        5205.249348431607,
+        4964.0450361924595,
+        5051.0876139172115,
+        5161.977951659663,
+        5020.91444438396,
+        5080.553267652405,
+        5136.466759543517
+      ],
+      "coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "labelUrl": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_64.lbl",
+      "sourceRange": {
+        "start": 514621440,
+        "end": 515220479,
+        "sha256": "dbf1ae4366ed911b1ee911efb072f2adfe25b2cd5779f58405084137fda5ec0a"
+      }
+    },
+    {
+      "id": "glo30",
+      "name": "Copernicus GLO-30",
+      "source": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_S16_00_W073_00_DEM/Copernicus_DSM_COG_10_S16_00_W073_00_DEM.tif",
+      "asset": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_S16_00_W073_00_DEM/Copernicus_DSM_COG_10_S16_00_W073_00_DEM.tif",
+      "values": [
+        3789.0679959413546,
+        3831.0233227886465,
+        3884.491135176223,
+        3793.31141821782,
+        3848.9739567341417,
+        3923.268565821207,
+        3810.584367316467,
+        3842.3354236174,
+        3895.111778673746
+      ],
+      "coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999
+      ],
+      "quality": {},
+      "windowSha256": "957def29d62cbdd234e6b978182bd29bd8b94c127be35df345df5c9f0021d8ec"
+    },
+    {
+      "id": "aw3d30",
+      "name": "JAXA AW3D30 v4.1",
+      "source": "https://s3.ap-northeast-1.wasabisys.com/je-pds/cog/v1/JAXA.EORC_ALOS.PRISM_AW3D30.v4.1_global/2024-04/3/W073.00-W072.00/S16.00-S15.00.json",
+      "asset": "https://s3.ap-northeast-1.wasabisys.com/je-pds/cog/v1/JAXA.EORC_ALOS.PRISM_AW3D30.v4.1_global/2024-04/3/W073.00-W072.00/W073.00-S16.00-W072.00-S15.00-DSM.tiff",
+      "values": [
+        3785.8414457179124,
+        3828.4788572650496,
+        3882.0869061354238,
+        3790.0961699494155,
+        3846.270358659915,
+        3921.174224266118,
+        3807.518623148184,
+        3839.683485240247,
+        3893.0500376248688
+      ],
+      "coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9999999999999999,
+        1.0,
+        1.0
+      ],
+      "quality": {
+        "maskAsset": "https://s3.ap-northeast-1.wasabisys.com/je-pds/cog/v1/JAXA.EORC_ALOS.PRISM_AW3D30.v4.1_global/2024-04/3/W073.00-W072.00/W073.00-S16.00-W072.00-S15.00-MSK.tiff",
+        "nonzeroMaskPixels": 0,
+        "unavailableMaskPixels": 0,
+        "maskPixelCount": 9996
+      },
+      "windowSha256": "240d25a955c11c37f0447684904dd08dabed7ef06c88eceea2ceaf623bbb2c06"
+    }
+  ]
+}

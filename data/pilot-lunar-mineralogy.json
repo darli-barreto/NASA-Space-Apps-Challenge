@@ -1,0 +1,153 @@
+{
+  "referenceId": "moon-mons-mouton",
+  "center": {
+    "lat": -84.6,
+    "lon": 31
+  },
+  "datasetUrl": "https://zenodo.org/records/7108163",
+  "studyUrl": "https://doi.org/10.3847/PSJ/ac532c",
+  "mineralAbundanceModelRmseWtPct": 9,
+  "grid": {
+    "resolutionM": 1002.35,
+    "windowM": 4000,
+    "rows": 4,
+    "columns": 4,
+    "rowOffset": 1403,
+    "columnOffset": 1347,
+    "worldTransform": [
+      1002.3503361012259,
+      1.0309455516917303e-13,
+      -1267472.0000000005,
+      -1.84092219452863e-13,
+      1002.3503361012258,
+      -1267471.9999999998
+    ],
+    "counts": [
+      3,
+      5,
+      4,
+      2,
+      2,
+      5,
+      8,
+      2,
+      7,
+      0,
+      10,
+      0,
+      6,
+      1,
+      2,
+      4
+    ],
+    "asset": "https://zenodo.org/records/7108163/files/gridded_spectral_profiler_counts_south_pole.tif.zip?download=1",
+    "md5": "6114aa94a163e8c795458deafef17855"
+  },
+  "method": "Celdas con centro dentro de 4 × 4 km en la proyección polar. Media de celdas con observaciones Kaguya y estimación válida. Se excluyen celdas sin observaciones directas.",
+  "layers": [
+    {
+      "id": "plagioclase",
+      "label": "Plagioclasa",
+      "values": [
+        74.0,
+        79.0,
+        68.0,
+        70.0,
+        66.0,
+        70.0,
+        74.0,
+        74.0,
+        78.0,
+        null,
+        78.0,
+        null,
+        79.0,
+        68.0,
+        77.0,
+        66.0
+      ],
+      "mean": 72.9286,
+      "validCells": 14,
+      "asset": "https://zenodo.org/records/7108163/files/gridded_plagioclase_mosaic_south_pole.tiff.zip?download=1",
+      "md5": "991cfc6b124c0a5911a3ab74f1d2e524"
+    },
+    {
+      "id": "olivine",
+      "label": "Olivino",
+      "values": [
+        13.0,
+        0.0,
+        6.4,
+        9.0,
+        3.4,
+        0.0,
+        13.0,
+        2.6,
+        0.0,
+        null,
+        8.8,
+        null,
+        0.0,
+        3.2,
+        2.3,
+        10.2
+      ],
+      "mean": 5.1357,
+      "validCells": 14,
+      "asset": "https://zenodo.org/records/7108163/files/gridded_olivine_mosaic_south_pole.tiff.zip?download=1",
+      "md5": "ab4f59c1c1e5d75936426939e65a8c84"
+    },
+    {
+      "id": "low-calcium-pyroxene",
+      "label": "Piroxeno bajo en calcio",
+      "values": [
+        13.0,
+        21.0,
+        25.6,
+        21.0,
+        30.6,
+        30.0,
+        13.0,
+        20.8,
+        22.0,
+        null,
+        13.2,
+        null,
+        21.0,
+        25.6,
+        18.4,
+        23.8
+      ],
+      "mean": 21.3571,
+      "validCells": 14,
+      "asset": "https://zenodo.org/records/7108163/files/gridded_low_calcium_pyroxene_mosaic_south_pole.tiff.zip?download=1",
+      "md5": "4dec67970236d30ec68f7258033ea6b7"
+    },
+    {
+      "id": "high-calcium-pyroxene",
+      "label": "Piroxeno alto en calcio",
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.6,
+        0.0,
+        null,
+        0.0,
+        null,
+        0.0,
+        3.2,
+        2.3,
+        0.0
+      ],
+      "mean": 0.5786,
+      "validCells": 14,
+      "asset": "https://zenodo.org/records/7108163/files/gridded_high_calcium_pyroxene_mosaic_south_pole.tiff.zip?download=1",
+      "md5": "56a1c510474717d9a0e86a8c12098d7b"
+    }
+  ]
+}
