@@ -24,6 +24,8 @@ test('thermal archive covers the catalog and unavailable MODIS remains missing',
   assert.equal(andagua.status, 'available');
   assert.equal(andagua.modis.inRanking, false);
   assert.ok(andagua.modis.phases.every(phase => phase.strictCount <= phase.possibleCount));
+  assert.deepEqual(andagua.modis.phases.map(phase => [phase.quality, phase.strictCount, phase.statistics?.count]),
+    [['exploratory', 0, 100], ['exploratory', 0, 64]]);
   const missing = require('../data/catalog-thermal.json').unavailable[0];
   if (missing) {
     const unavailable = await (await GET(request(missing))).json();

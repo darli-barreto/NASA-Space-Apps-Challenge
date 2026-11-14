@@ -530,8 +530,11 @@
   "thermalPowerCoverage": "Regional annual mean surface temperature in {year}. Grid cells of 0.5° × 0.625°.",
   "thermalOriginalSource": "View original data",
   "thermalLoading": "Loading ORNL DAAC observations…",
-  "thermalModisUnavailable": "MODIS is unavailable for this request.",
-  "thermalModisCoverage": "Four eight-day composites starting January 1–25, 2026. A 5 × 5 grid with about {cell} m pixels. Only samples with the mandatory good-quality flag are included.",
+  "thermalModisUnavailable": "TERRA has no stored MODIS data for this request and could not load observations from ORNL DAAC.",
+  "thermalModisRetry": "Retry MODIS",
+  "thermalModisRequest": "Open ORNL DAAC request",
+  "thermalModisQualityMissing": "No samples passed quality checks",
+  "thermalModisCoverage": "Four eight-day composites starting January 1–25, 2026. A 5 × 5 grid with about {cell} m pixels.",
   "thermalValidSamples": "Valid samples",
   "thermalDay": "Day",
   "thermalNight": "Night",
@@ -541,5 +544,7 @@
   "thermalCatalogTitle": "Surface temperature by candidate",
   "thermalAnnualMean": "Annual mean",
   "thermalCatalogArchive": "Catalog surface temperature · NASA POWER",
-  "thermalModisArchive": "Catalog MODIS observations"
+  "thermalModisArchive": "Catalog MODIS observations",
+  "thermalModisExploratoryNote": "Exploratory rows use review-flagged observations that pass detailed quality checks and fall within a reported temperature error category of up to 2 K.",
+  "thermalModisExploratoryCount": "Exploratory · {strict} with the good-quality flag"
 }

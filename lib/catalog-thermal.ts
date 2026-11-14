@@ -7,8 +7,15 @@ export function archivedThermal(site: { id: number; lat: number; lon: number }) 
 }
 
 export function thermalResult(source: string, cellM: number, rows: ModisBand[], retrievedAt: string | null) {
+  const strict = summarizeModis(rows);
+  const reviewed = summarizeModis(rows, modisDates, 25, true);
+  const phases = strict.map((row, index) => {
+    if (row.statistics) return { ...row, quality: "strict" as const };
+    const alternative = reviewed[index];
+    return { ...alternative, quality: alternative.statistics ? "exploratory" as const : "missing" as const };
+  });
   return { product: archive.product, source, cellM, dates: modisDates, rows, retrievedAt,
-    phases: summarizeModis(rows), inRanking: false };
+    phases, inRanking: false };
 }
 
 export async function fetchModisThermal(lat: number, lon: number) {

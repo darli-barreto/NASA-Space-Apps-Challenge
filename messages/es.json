@@ -530,8 +530,11 @@
   "thermalPowerCoverage": "Media anual regional de temperatura superficial en {year}. Celdas de 0,5° × 0,625°.",
   "thermalOriginalSource": "Consultar datos originales",
   "thermalLoading": "Consultando las observaciones de ORNL DAAC…",
-  "thermalModisUnavailable": "MODIS no está disponible para esta consulta.",
-  "thermalModisCoverage": "Cuatro compuestos de ocho días iniciados del 1 al 25 de enero de 2026. Malla 5 × 5, píxeles de unos {cell} m. Solo se incluyen muestras con bandera obligatoria de buena calidad.",
+  "thermalModisUnavailable": "TERRA no tiene datos MODIS guardados para esta consulta y no pudo cargar las observaciones de ORNL DAAC.",
+  "thermalModisRetry": "Reintentar MODIS",
+  "thermalModisRequest": "Abrir consulta en ORNL DAAC",
+  "thermalModisQualityMissing": "Ninguna muestra pasó los controles de calidad",
+  "thermalModisCoverage": "Cuatro compuestos de ocho días iniciados del 1 al 25 de enero de 2026. Malla 5 × 5, píxeles de unos {cell} m.",
   "thermalValidSamples": "Muestras válidas",
   "thermalDay": "Día",
   "thermalNight": "Noche",
@@ -541,5 +544,7 @@
   "thermalCatalogTitle": "Temperatura superficial por candidato",
   "thermalAnnualMean": "Media anual",
   "thermalCatalogArchive": "Temperatura superficial del catálogo · NASA POWER",
-  "thermalModisArchive": "Observaciones MODIS del catálogo"
+  "thermalModisArchive": "Observaciones MODIS del catálogo",
+  "thermalModisExploratoryNote": "Las filas exploratorias usan observaciones con bandera de revisión que pasan los controles detallados de calidad y tienen una categoría de error térmico de hasta 2 K.",
+  "thermalModisExploratoryCount": "Exploratorias · {strict} con bandera de buena calidad"
 }
