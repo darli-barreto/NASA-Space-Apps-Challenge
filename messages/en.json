@@ -525,5 +525,21 @@
   "statusInteractiveEarthMapLatitudeLongitudeAndRadiusCan": "Interactive Earth map. Latitude, longitude and radius can also be entered in the panel.",
   "statusInteractiveMapOfPeruUseArrowKeysTo": "Interactive map of Peru. Use arrow keys to pan and the buttons to zoom.",
   "terrainEdge": "2/2 · Choose the edge · {radius} km",
-  "terrainRadiusLimit": "The radius is {radius} km. Choose a radius from 1 to 25 km."
+  "terrainRadiusLimit": "The radius is {radius} km. Choose a radius from 1 to 25 km.",
+  "thermalContext": "Descriptive environmental variable. The ranking uses relief and gradient.",
+  "thermalPowerCoverage": "Regional annual mean surface temperature in {year}. Grid cells of 0.5° × 0.625°.",
+  "thermalOriginalSource": "View original data",
+  "thermalLoading": "Loading ORNL DAAC observations…",
+  "thermalModisUnavailable": "MODIS is unavailable for this request.",
+  "thermalModisCoverage": "Four eight-day composites starting January 1–25, 2026. A 5 × 5 grid with about {cell} m pixels. Only samples with the mandatory good-quality flag are included.",
+  "thermalValidSamples": "Valid samples",
+  "thermalDay": "Day",
+  "thermalNight": "Night",
+  "thermalPlanetaryReference": "Planetary reference temperature",
+  "thermalLunarScale": "Diviner bolometric brightness at 240 m. Lunar solar times and southern summer observations from 2009 to 2019. Differences in scale, period and local time prevent thermal similarity scoring.",
+  "thermalPlanetaryUnavailable": "TERRA has no archived thermal observations for this reference.",
+  "thermalCatalogTitle": "Surface temperature by candidate",
+  "thermalAnnualMean": "Annual mean",
+  "thermalCatalogArchive": "Catalog surface temperature · NASA POWER",
+  "thermalModisArchive": "Catalog MODIS observations"
 }

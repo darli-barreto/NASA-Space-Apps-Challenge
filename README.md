@@ -44,6 +44,10 @@ $T$ indica Tierra y $P$ la referencia planetaria. El relieve se expresa en metro
 
 El análisis por área pondera la elevación de cada píxel por la superficie que ocupa dentro de la celda. Las celdas con cobertura incompleta quedan sin valor. Estas métricas complementan el ranking de nueve puntos.
 
+## Temperatura superficial
+
+En **Discover → Report → Comparison → Surface temperature** se muestra la media regional de 2024 de NASA POWER (TS, MERRA‑2) para los 13 candidatos archivados. La tabla conjunta está en **Data → Surface temperature by candidate**. MODIS MOD11A2 aporta observaciones diurnas y nocturnas cuando están disponibles. El archivo incluye MODIS para Andagua y Diviner para Mons Mouton. La temperatura se usa para describir el entorno y queda fuera del ranking.
+
 ## Datos y verificación
 
 La sección **Datos** permite descargar las mediciones y sus fuentes en JSON. Para comprobar el proyecto y recalcular el ranking archivado:

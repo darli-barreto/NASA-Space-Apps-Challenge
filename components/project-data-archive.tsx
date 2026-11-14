@@ -22,6 +22,8 @@ const entries = [
   ["pilot.lunarMineralogy", "Mineralogía lunar y cobertura"],
   ["pilot.radar", "RADARSAT-1, RCM y Mini-RF"],
   ["pilot.neutrons", "LEND · conteos de neutrones"],
+  ["archives.catalogPowerSurface", "Temperatura superficial del catálogo · NASA POWER"],
+  ["archives.catalogThermal", "Observaciones MODIS del catálogo"],
   ["pilot.thermal", "MODIS y Diviner · muestras térmicas"],
   ["analysis", "Pesos, modelos y métricas derivadas"],
 ] as const;

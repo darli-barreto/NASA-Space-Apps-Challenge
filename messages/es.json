@@ -525,5 +525,21 @@
   "statusInteractiveEarthMapLatitudeLongitudeAndRadiusCan": "Mapa terrestre interactivo. Alternativa accesible: campos de latitud, longitud y radio del panel.",
   "statusInteractiveMapOfPeruUseArrowKeysTo": "Mapa interactivo de Perú. Usa las flechas para moverte y los botones para cambiar el zoom.",
   "terrainEdge": "2/2 · Elige el borde · {radius} km",
-  "terrainRadiusLimit": "El radio es {radius} km. Elige un radio de 1 a 25 km."
+  "terrainRadiusLimit": "El radio es {radius} km. Elige un radio de 1 a 25 km.",
+  "thermalContext": "Variable ambiental descriptiva. El ranking usa relieve y gradiente.",
+  "thermalPowerCoverage": "Media anual regional de temperatura superficial en {year}. Celdas de 0,5° × 0,625°.",
+  "thermalOriginalSource": "Consultar datos originales",
+  "thermalLoading": "Consultando las observaciones de ORNL DAAC…",
+  "thermalModisUnavailable": "MODIS no está disponible para esta consulta.",
+  "thermalModisCoverage": "Cuatro compuestos de ocho días iniciados del 1 al 25 de enero de 2026. Malla 5 × 5, píxeles de unos {cell} m. Solo se incluyen muestras con bandera obligatoria de buena calidad.",
+  "thermalValidSamples": "Muestras válidas",
+  "thermalDay": "Día",
+  "thermalNight": "Noche",
+  "thermalPlanetaryReference": "Temperatura de la referencia planetaria",
+  "thermalLunarScale": "Diviner, brillo bolométrico en celdas de 240 m. Horas solares lunares y observaciones de verano austral de 2009 a 2019. Las diferencias de escala, periodo y horario impiden puntuar el parecido térmico.",
+  "thermalPlanetaryUnavailable": "Faltan observaciones térmicas de esta referencia en el archivo de TERRA.",
+  "thermalCatalogTitle": "Temperatura superficial por candidato",
+  "thermalAnnualMean": "Media anual",
+  "thermalCatalogArchive": "Temperatura superficial del catálogo · NASA POWER",
+  "thermalModisArchive": "Observaciones MODIS del catálogo"
 }

@@ -1,3 +1,5 @@
+import catalogThermal from "@/data/catalog-thermal.json";
+import catalogPowerSurface from "@/data/catalog-power-surface.json";
 import catalogAreaTerrain from "@/data/catalog-area-terrain.json";
 import areaTerrain from "@/data/pilot-area-terrain.json";
 import areaTerrainNative from "@/data/pilot-area-terrain-native.json";
@@ -29,7 +31,7 @@ export function GET() {
     description: "Referencias y extracciones archivadas. Los resultados de consultas en vivo se exportan desde la app. Las imágenes en los servicios originales se indican mediante enlaces.",
     sources: { nasa: nasaSources, other: partnerSources, challenge: challengeResources, challengeResourcesUrl },
     planetaryProfiles,
-    archives: { catalogAreaTerrain, catalog, ingemmet, srtm, controls, peruBoundary, detailedTerrain },
+    archives: { catalogThermal, catalogPowerSurface, catalogAreaTerrain, catalog, ingemmet, srtm, controls, peruBoundary, detailedTerrain },
     pilot: { ...pilot, areaTerrain, areaTerrainNative, terrainAggregated: terrain, terrainSensitivity: pilotTerrainSensitivity, geology, earthMaterials, lunarMineralogy, radar, neutrons, thermal },
     analysis: {
       algorithmVersion,

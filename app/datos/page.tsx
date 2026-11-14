@@ -1,3 +1,4 @@
+import CatalogTemperatureTable from "@/components/catalog-temperature-table";
 import SourceText from "@/components/source-text";
 import { Message } from "@/components/message";
 import type { Metadata } from "next";
@@ -50,6 +51,7 @@ export default function DataPage() {
         <p><Message id="theRankingCombinesSrtmLandElevationsWithNasa" /></p>
         <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-[#0042A6] underline underline-offset-4">
           <a href="/api/datos/archivo" download><Message id="downloadDataArchiveJson" /></a>
+          <a href="#thermal-data"><Message id="thermalCatalogTitle" /></a>
           <Link href={workspaceRoutes.Metodología}><Message id="analysisMethodology" /></Link>
           <a href={challengeResourcesUrl} target="_blank" rel="noreferrer"><Message id="officialChallengeResources" /></a>
         </div>
@@ -88,6 +90,7 @@ export default function DataPage() {
       </section>
       <SessionAnalysisData />
       <PilotDataValues />
+      <CatalogTemperatureTable />
       <ProjectDataArchive />
       <SourceTable title="Fuentes NASA integradas" sources={nasaSources} />
       <SourceTable title="Otras fuentes integradas" sources={partnerSources} />

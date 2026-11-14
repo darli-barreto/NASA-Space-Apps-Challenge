@@ -8,6 +8,30 @@ import { renderToStaticMarkup } from 'react-dom/server';
 const require = createRequire(import.meta.url);
 const ts = require('typescript');
 
+test('thermal archive covers the catalog and unavailable MODIS remains missing', async () => {
+  const catalog = require('../data/catalog-validation.json').candidates.filter(site => site.gridInside === 9);
+  const power = require('../data/catalog-power-surface.json');
+  assert.deepEqual(power.sites.map(site => site.id).sort(), catalog.map(site => site.id).sort());
+  for (const site of power.sites) {
+    assert.equal(site.months.length, 12);
+    assert.ok(site.months.every(Number.isFinite) && Number.isFinite(site.annual));
+  }
+
+  const load = harness(async () => new Response(null, { status: 503 }));
+  const { GET } = load('app/api/analog-search/thermal/route');
+  const request = id => new Request(`https://terra.test/api/analog-search/thermal?id=${id}&archived=1`);
+  const andagua = await (await GET(request(55742))).json();
+  assert.equal(andagua.status, 'available');
+  assert.equal(andagua.modis.inRanking, false);
+  assert.ok(andagua.modis.phases.every(phase => phase.strictCount <= phase.possibleCount));
+  const missing = require('../data/catalog-thermal.json').unavailable[0];
+  if (missing) {
+    const unavailable = await (await GET(request(missing))).json();
+    assert.equal(unavailable.status, 'unavailable');
+    assert.equal(unavailable.modis, null);
+  }
+});
+
 test('full-area panel safely renders when the area prop is missing or null', () => {
   const exports = {};
   const code = ts.transpileModule(readFileSync(new URL('../components/terrain-area-panel.tsx', import.meta.url), 'utf8'), {

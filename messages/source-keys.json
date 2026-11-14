@@ -523,5 +523,7 @@
   "No se pudo completar el contraste. Reintenta la búsqueda.": "statusTheComparisonCouldNotBeCompletedTryThe",
   "Revisa coordenadas, radio (1–25 km) y criterios.": "statusCheckTheCoordinatesRadiusKmAndCriteria",
   "Mapa terrestre interactivo. Alternativa accesible: campos de latitud, longitud y radio del panel.": "statusInteractiveEarthMapLatitudeLongitudeAndRadiusCan",
-  "Mapa interactivo de Perú. Usa las flechas para moverte y los botones para cambiar el zoom.": "statusInteractiveMapOfPeruUseArrowKeysTo"
+  "Mapa interactivo de Perú. Usa las flechas para moverte y los botones para cambiar el zoom.": "statusInteractiveMapOfPeruUseArrowKeysTo",
+  "Temperatura superficial del catálogo · NASA POWER": "thermalCatalogArchive",
+  "Observaciones MODIS del catálogo": "thermalModisArchive"
 }

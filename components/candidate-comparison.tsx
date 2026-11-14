@@ -1,3 +1,4 @@
+import CandidateTemperature from "./candidate-temperature";
 import { useSourceText } from "./source-text";
 import { useTranslations } from "next-intl";
 import { candidateArea } from "@/lib/catalog-area-terrain";
@@ -36,6 +37,7 @@ export default function CandidateComparison({site,row,profile,total}:{
       spacingKm={profile.signature.spacingKm}/>
     {area && <TerrainAreaPanel area={area} />}
     <DetailedTerrainPanel site={site} profileId={profile.id} body={profile.body} initial={row.detailed}/>
+    <CandidateTemperature key={`${site.id}:${site.lat}:${site.lon}:${profile.id}`} site={site} profileId={profile.id} archived={row.archived === true} />
     <section className="border-t border-slate-300 pt-6" aria-labelledby="screening-heading">
       <h3 id="screening-heading" className="text-xl font-semibold">{translate("howTheInitialRankWasCalculated")}</h3>
       <p className="mt-2 text-sm">{t(`Nueve nodos a 2 km. Puesto ${row.rankMin}–${row.rankMax} de ${total} con diferentes pesos.`, `Nine points spaced 2 km apart. Rank ${row.rankMin}–${row.rankMax} out of ${total} under different weights.`)}</p>

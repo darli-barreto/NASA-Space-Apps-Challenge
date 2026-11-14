@@ -6,7 +6,6 @@ import pilot from "@/data/pilot-evidence.json";
 import { TerrainComparison } from "./terrain-comparison";
 
 import TerrainSensitivityPanel from "./terrain-sensitivity-panel";
-import ThermalEvidence from "./thermal-evidence";
 import RadarEvidence from "./radar-evidence";
 import GeologyEvidence from "./geology-evidence";
 import MineralogyEvidence from "./mineralogy-evidence";
@@ -48,7 +47,6 @@ export default function PilotEvidence() {
       </figure>
     </div>
     {sentinel && <p className="my-2 text-xs leading-relaxed text-black"><Message id="sentinel2ClassificationAt" /> {side ** 2} <Message id="nodes" /> {Object.entries(sentinel.classification).map(([code, count]) => `${classifications[code] ?? code} ${count}`).join(" · ")}<Message id="countsReferToSamplePoints" /></p>}
-    <ReportSection subsection title={<SourceText value="Temperatura superficial" />}><ThermalEvidence /></ReportSection>
     <RadarEvidence />
     <ReportSection subsection title={<SourceText value="Cobertura de evidencia" />}>
     <dl className="mt-3 divide-y divide-slate-200 text-xs">
