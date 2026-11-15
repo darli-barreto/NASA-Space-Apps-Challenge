@@ -26,7 +26,7 @@ export default function DetailedTerrainPanel({site,profileId,body,initial}:{
       <div><p className="text-xs">{translate("pointSampling44Km")}</p><h3 id="dense-heading" className="mt-1 text-xl font-semibold">{translate("terrainDetail")}</h3></div>
       <div className="flex gap-2" aria-label={translate("sampleSpacing")}>
         {[500,1000,2000].map((step,i)=><button key={step} aria-pressed={scale===i} onClick={()=>setScale(i)}
-          className="rounded-sm border border-slate-300 px-3 py-2 text-xs aria-pressed:border-black aria-pressed:bg-slate-100">{step} m</button>)}
+          className="rounded-sm border border-slate-300 px-3 py-2 text-xs aria-pressed:border-black aria-pressed:bg-slate-100 aria-pressed:font-semibold [[data-dark]_&]:aria-pressed:border-sky-300 [[data-dark]_&]:aria-pressed:bg-slate-700 [[data-dark]_&]:aria-pressed:text-white">{step} m</button>)}
       </div>
     </div>
     {!data && !error && <p className="my-5 text-sm" role="status">{translate("loading81ElevationsPerSite")}</p>}

@@ -40,7 +40,7 @@ export default function ProjectDataArchive() {
     setLoading(true);
     setError(false);
     try {
-      const response = await fetch("/api/datos/archivo");
+      const response = await fetch("/api/data/archive");
       if (!response.ok) throw new Error("Archivo no disponible");
       setArchive(await response.json());
     } catch {

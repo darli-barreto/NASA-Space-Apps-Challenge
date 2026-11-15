@@ -2,15 +2,15 @@ export const workspaceWidth = "mx-auto w-full max-w-[1640px] px-3 sm:px-4 lg:px-
 
 export const workspaceRoutes = {
   Descubrir: "/",
-  Explorar: "/mapa",
-  Comparar: "/comparar",
-  Datos: "/datos",
-  Metodología: "/metodologia",
-  Resultados: "/mapa/resultados",
+  Explorar: "/map",
+  Comparar: "/compare",
+  Datos: "/data",
+  Metodología: "/methodology",
+  Resultados: "/map/results",
 } as const;
 
 export function candidateHref(profile: string, id: number) {
-  return `/analogos/${profile}/${id}`;
+  return `/analogs/${profile}/${id}`;
 }
 
 export function candidateName(id: number) {
