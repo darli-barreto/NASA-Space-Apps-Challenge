@@ -50,7 +50,7 @@ export default function DataPage() {
         <h1 className="text-3xl font-bold tracking-tight"><Message id="dataAndSources" /></h1>
         <p><Message id="theRankingCombinesSrtmLandElevationsWithNasa" /></p>
         <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-[#0042A6] underline underline-offset-4">
-          <a href="/api/datos/archivo" download><Message id="downloadDataArchiveJson" /></a>
+          <a href="/api/data/archive" download><Message id="downloadDataArchiveJson" /></a>
           <a href="#thermal-data"><Message id="thermalCatalogTitle" /></a>
           <Link href={workspaceRoutes.Metodología}><Message id="analysisMethodology" /></Link>
           <a href={challengeResourcesUrl} target="_blank" rel="noreferrer"><Message id="officialChallengeResources" /></a>

@@ -18,7 +18,7 @@ export default function TerrainAreaPanel({ area }: { area?: ReturnType<typeof ca
       <div><h3 id="area-heading" className="mt-1 text-xl font-semibold">{translate("fullAreaComparison")}</h3></div>
       <div className="flex gap-2" aria-label={translate("averagingCellSize")}>
         {[500,1000].map((step,i) => <button key={step} aria-pressed={scaleIndex===i} onClick={()=>setScaleIndex(i)}
-          className="rounded-sm border border-slate-300 px-3 py-2 text-xs aria-pressed:border-black aria-pressed:bg-slate-100">{translate("cellsOf")} {step} m</button>)}
+          className="rounded-sm border border-slate-300 px-3 py-2 text-xs aria-pressed:border-black aria-pressed:bg-slate-100 aria-pressed:font-semibold [[data-dark]_&]:aria-pressed:border-sky-300 [[data-dark]_&]:aria-pressed:bg-slate-700 [[data-dark]_&]:aria-pressed:text-white">{translate("cellsOf")} {step} m</button>)}
       </div>
     </div>
     <p className="my-3 max-w-3xl text-sm">{translate("44KmWindowEachCellAveragesAll")}</p>

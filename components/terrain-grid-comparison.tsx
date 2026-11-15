@@ -11,8 +11,9 @@ type Site = {
 
 const metres = new Intl.NumberFormat("es-PE", { maximumFractionDigits: 1 });
 const coordinates = new Intl.NumberFormat("es-PE", { maximumFractionDigits: 5 });
-const light = "#f8f8f8";
-const dark = "#a6a6a6";
+// Theme-aware ramp: set on the figure, swapped in dark mode.
+const light = "var(--grid-low)";
+const dark = "var(--grid-high)";
 
 export default function TerrainGridComparison({ earth, planet, spacingKm }: {
   earth: Site;
@@ -23,7 +24,7 @@ export default function TerrainGridComparison({ earth, planet, spacingKm }: {
   const { grids, maximumM } = terrainGrids(sites.map(site => site.samples));
 
   return (
-    <figure className="my-4 border-y border-slate-200 py-3">
+    <figure className="my-4 border-y border-slate-200 py-3 [--grid-low:#f8f8f8] [--grid-high:#a6a6a6] [[data-dark]_&]:[--grid-low:#1e293b] [[data-dark]_&]:[--grid-high:#64748b]">
       <figcaption className="mb-2 text-sm font-semibold"><Message id="visualTerrainComparison" /></figcaption>
       <div className="grid grid-cols-2 gap-2 sm:gap-3">
         {sites.map((site, index) => {
@@ -43,7 +44,7 @@ export default function TerrainGridComparison({ earth, planet, spacingKm }: {
                           return (
                             <td
                               key={column}
-                              className={`h-9 border text-black ${center ? "border-black font-semibold" : "border-slate-200"}`}
+                              className={`h-9 border text-slate-900 [[data-dark]_&]:text-slate-100 ${center ? "border-black font-semibold [[data-dark]_&]:border-slate-100" : "border-slate-200"}`}
                               style={{ backgroundColor: `color-mix(in srgb, ${dark} ${weight * 100}%, ${light})` }}
                               title={`${center ? "Centro · " : ""}${coordinates.format(cell.lat)}°, ${coordinates.format(cell.lon)}° · ${cell.elevation === null || !Number.isFinite(cell.elevation) ? "Sin dato" : `${metres.format(cell.elevation)} m de elevación original`}`}
                             >

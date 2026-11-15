@@ -60,7 +60,7 @@ export default function Workspace({ children }: { children: React.ReactNode }) {
   }
   return <div className={`flex min-h-dvh flex-col ${tab === "Descubrir" ? "lg:h-dvh lg:min-h-[36rem]" : ""}`}>
     <WorkspaceHeader
-      tab={tab ?? (pathname.startsWith("/analogos/") ? "Descubrir" : "")}
+      tab={tab ?? (pathname.startsWith("/analogs/") ? "Descubrir" : "")}
       searchAction={{
         label: discovery.busy ? translate("pause") : discovery.complete ? translate("complete") : discovery.results.length ? translate("resumeSearch") : translate("findCandidates"),
         disabled: discovery.complete && !discovery.busy,
@@ -71,7 +71,7 @@ export default function Workspace({ children }: { children: React.ReactNode }) {
         },
       }}
     />
-    <div className={`${pathname.startsWith("/analogos/") ? "w-full" : workspaceWidth} flex min-h-0 min-w-0 flex-1 flex-col md:flex-row`}>
+    <div className={`${pathname.startsWith("/analogs/") ? "w-full" : workspaceWidth} flex min-h-0 min-w-0 flex-1 flex-col md:flex-row`}>
       {tab === "Explorar" && <SiteProperties site={site} settings={settings} busy={busy} setSite={setSite}
         setSettings={setSettings} analyze={analyze} />}
       <main className="flex min-w-0 flex-1 flex-col">

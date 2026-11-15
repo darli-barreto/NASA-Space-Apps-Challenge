@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+/* Dark mode: the brand blue #0042A6 is unreadable on the dark background,
+   so links and actions that use it switch to a light blue. */
+@layer utilities {
+  [data-dark] .text-\[\#0042A6\],
+  [data-dark] .\[\&_a\]\:text-\[\#0042A6\] a {
+    color: var(--color-sky-300);
+  }
+}

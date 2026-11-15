@@ -88,7 +88,7 @@ export default function CandidateTemperature({ site, profileId, archived }: {
         <a className="text-xs underline" href={modis.source} target="_blank" rel="noreferrer">{t("thermalOriginalSource")}</a>
       </>}
     </div>
-    <Link href="/datos#thermal-data" className="inline-block text-sm underline">{t("thermalCatalogTitle")}</Link>
+    <Link href="/data#thermal-data" className="inline-block text-sm underline">{t("thermalCatalogTitle")}</Link>
     <div className="border-t border-slate-200 pt-3 text-sm">
       <h4 className="font-medium">{t("thermalPlanetaryReference")}</h4>
       {lunar.length ? <>
