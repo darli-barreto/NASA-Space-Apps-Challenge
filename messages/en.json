@@ -546,5 +546,12 @@
   "thermalCatalogArchive": "Catalog surface temperature · NASA POWER",
   "thermalModisArchive": "Catalog MODIS observations",
   "thermalModisExploratoryNote": "Exploratory rows use review-flagged observations that pass detailed quality checks and fall within a reported temperature error category of up to 2 K.",
-  "thermalModisExploratoryCount": "Exploratory · {strict} with the good-quality flag"
+  "thermalModisExploratoryCount": "Exploratory · {strict} with the good-quality flag",
+  "newSearch": "New search",
+  "reliefWeight": "50% Relief",
+  "gradientWeight": "50% P90 gradient",
+  "reliefWeightHint": "Difference between the highest and lowest points of the grid.",
+  "gradientWeightHint": "90th percentile of the slopes between neighboring points 2 km apart.",
+  "gridCellCenterPrefix": "Center · ",
+  "gridCellOriginalElevation": "{value} m original elevation"
 }

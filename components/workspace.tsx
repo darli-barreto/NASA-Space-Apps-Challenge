@@ -36,7 +36,7 @@ export default function Workspace({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const tab = Object.entries(workspaceRoutes).find(([, href]) => href === pathname)?.[0];
   const discovery = useDiscovery();
-  const [selectedId, selectCandidate] = useState<number>();
+  const [selectedId, selectCandidate] = useState<number | undefined>();
   const [result, setResult] = useState<Analysis | null>(null);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");
@@ -62,11 +62,12 @@ export default function Workspace({ children }: { children: React.ReactNode }) {
     <WorkspaceHeader
       tab={tab ?? (pathname.startsWith("/analogs/") ? "Descubrir" : "")}
       searchAction={{
-        label: discovery.busy ? translate("pause") : discovery.complete ? translate("complete") : discovery.results.length ? translate("resumeSearch") : translate("findCandidates"),
-        disabled: discovery.complete && !discovery.busy,
+        label: discovery.busy ? translate("pause") : discovery.complete ? translate("newSearch") : discovery.results.length ? translate("resumeSearch") : translate("findCandidates"),
+        disabled: false,
         onClick: () => {
           if (tab !== "Descubrir") navigate("Descubrir");
           if (discovery.busy) discovery.pause();
+          else if (discovery.complete) { discovery.reset(); selectCandidate(undefined); }
           else void discovery.search();
         },
       }}

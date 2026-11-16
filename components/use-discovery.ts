@@ -18,6 +18,7 @@ export function useDiscovery(initialProfileId = defaultPlanetaryProfile) {
   const [batches, setBatches] = useState<Batch[]>([]);
   const [busy, setBusy] = useState(false),
     [error, setError] = useState("");
+  const [searchId, setSearchId] = useState(0);
   const stop = useRef(false),
     controller = useRef<AbortController | null>(null);
   useEffect(() => () => { stop.current = true; controller.current?.abort(); }, []);
@@ -98,12 +99,25 @@ export function useDiscovery(initialProfileId = defaultPlanetaryProfile) {
     controller.current?.abort();
   }
 
+  // Returns the search to its initial state, as if the page had just been opened.
+  function reset() {
+    pause();
+    controller.current = null;
+    setProfileId(initialProfileId);
+    setCatalog(null);
+    setResults([]);
+    setBatches([]);
+    setBusy(false);
+    setError("");
+    setSearchId(id => id + 1);
+  }
+
   function download() {
     downloadDiscovery({ profileId, profile, catalog, ranked, referenceTerrainMetrics, complete, results, batches, records });
   }
 
   return {
     profileId, setProfileId, profile, catalog, results, busy, error,
-    pause, eligible, ranked, complete, search, download,
+    pause, reset, searchId, eligible, ranked, complete, search, download,
   };
 }

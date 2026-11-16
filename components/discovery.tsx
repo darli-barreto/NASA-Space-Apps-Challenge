@@ -20,11 +20,17 @@ import { primaryActionClass } from "./primitives";
 
 const previewWidth = "mx-auto w-full max-w-sm min-w-0 lg:max-w-[max(5rem,calc(100cqh-10.75rem))]";
 const rankingWeights = [
-  { id: "relief", label: "50 % Relieve", explanation: "Diferencia entre el punto más alto y el más bajo de la malla." },
-  { id: "gradient", label: "50 % Gradiente P90", explanation: "Percentil 90 de las inclinaciones entre puntos vecinos separados por 2 km." },
+  { id: "relief", label: "reliefWeight", explanation: "reliefWeightHint" },
+  { id: "gradient", label: "gradientWeight", explanation: "gradientWeightHint" },
 ] as const;
 
+// Keyed by the search id so "New search" also clears local view state.
 export default function Discovery() {
+  const { discovery } = useDiscoveryContext();
+  return <DiscoveryPanel key={discovery.searchId} />;
+}
+
+function DiscoveryPanel() {
   const sourceText = useSourceText();
   const { t } = useLanguage();
   const translate = useTranslations();
@@ -49,7 +55,7 @@ export default function Discovery() {
         <label className="block w-full min-w-0 text-sm font-semibold sm:max-w-lg">
           {translate("planetaryReference")}
           <select className="mt-1 block w-full rounded border border-slate-300 p-2 text-sm font-normal"
-            disabled={d.busy} value={d.profileId} onChange={event => d.setProfileId(event.target.value)}>
+            disabled={d.busy || d.complete} aria-readonly={d.complete || undefined} value={d.profileId} onChange={event => d.setProfileId(event.target.value)}>
             {planetaryProfiles.map(p => <option key={p.id} value={p.id}>{t(p.body, p.body === "Luna" ? "Moon" : "Mars")} · {sourceText(p.name)}</option>)}
           </select>
         </label>
@@ -59,11 +65,11 @@ export default function Discovery() {
               <li key={weight.id} className="group first:pr-2 last:pl-2">
                 <span tabIndex={0} aria-describedby={`${weightHintId}-${weight.id}`}
                   className="inline-flex min-h-8 cursor-help items-center rounded-xs bg-[#0042A6] px-2 py-0.5 text-white">
-                  {t(weight.label, weight.id === "relief" ? "50% Relief" : "50% P90 gradient")}
+                  {translate(weight.label)}
                 </span>
                 <div className="invisible absolute inset-x-0 top-full z-20 pt-1 group-has-[:focus-visible]:visible [@media(hover:hover)]:group-hover:visible">
                   <p id={`${weightHintId}-${weight.id}`} role="tooltip"
-                    className="rounded border border-slate-200 bg-white p-2 text-black shadow-sm">{weight.explanation}</p>
+                    className="rounded border border-slate-200 bg-white p-2 text-black shadow-sm">{translate(weight.explanation)}</p>
                 </div>
               </li>
             ))}
