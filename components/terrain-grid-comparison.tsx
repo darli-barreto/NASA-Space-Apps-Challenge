@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { Message } from "@/components/message";
 import type { ElevationPoint } from "@/lib/analog-math";
 import { terrainGrids } from "@/lib/terrain-grid";
@@ -20,6 +21,7 @@ export default function TerrainGridComparison({ earth, planet, spacingKm }: {
   planet: Site;
   spacingKm: number;
 }) {
+  const translate = useTranslations();
   const sites = [earth, planet];
   const { grids, maximumM } = terrainGrids(sites.map(site => site.samples));
 
@@ -46,10 +48,10 @@ export default function TerrainGridComparison({ earth, planet, spacingKm }: {
                               key={column}
                               className={`h-9 border text-slate-900 [[data-dark]_&]:text-slate-100 ${center ? "border-black font-semibold [[data-dark]_&]:border-slate-100" : "border-slate-200"}`}
                               style={{ backgroundColor: `color-mix(in srgb, ${dark} ${weight * 100}%, ${light})` }}
-                              title={`${center ? "Centro · " : ""}${coordinates.format(cell.lat)}°, ${coordinates.format(cell.lon)}° · ${cell.elevation === null || !Number.isFinite(cell.elevation) ? "Sin dato" : `${metres.format(cell.elevation)} m de elevación original`}`}
+                              title={`${center ? translate("gridCellCenterPrefix") : ""}${coordinates.format(cell.lat)}°, ${coordinates.format(cell.lon)}° · ${cell.elevation === null || !Number.isFinite(cell.elevation) ? translate("textNoData") : translate("gridCellOriginalElevation", { value: metres.format(cell.elevation) })}`}
                             >
                               {center && <span className="sr-only"><Message id="center" /> </span>}
-                              {cell.relativeM === null ? <abbr className="no-underline" title="Sin dato">—</abbr> : metres.format(cell.relativeM)}
+                              {cell.relativeM === null ? <abbr className="no-underline" title={translate("textNoData")}>—</abbr> : metres.format(cell.relativeM)}
                             </td>
                           );
                         })}

@@ -546,5 +546,12 @@
   "thermalCatalogArchive": "Temperatura superficial del catálogo · NASA POWER",
   "thermalModisArchive": "Observaciones MODIS del catálogo",
   "thermalModisExploratoryNote": "Las filas exploratorias usan observaciones con bandera de revisión que pasan los controles detallados de calidad y tienen una categoría de error térmico de hasta 2 K.",
-  "thermalModisExploratoryCount": "Exploratorias · {strict} con bandera de buena calidad"
+  "thermalModisExploratoryCount": "Exploratorias · {strict} con bandera de buena calidad",
+  "newSearch": "Nueva búsqueda",
+  "reliefWeight": "50 % Relieve",
+  "gradientWeight": "50 % Gradiente P90",
+  "reliefWeightHint": "Diferencia entre el punto más alto y el más bajo de la malla.",
+  "gradientWeightHint": "Percentil 90 de las inclinaciones entre puntos vecinos separados por 2 km.",
+  "gridCellCenterPrefix": "Centro · ",
+  "gridCellOriginalElevation": "{value} m de elevación original"
 }
